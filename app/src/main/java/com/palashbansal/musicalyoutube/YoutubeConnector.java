@@ -35,7 +35,7 @@ public class YoutubeConnector {
 
 		try {
 			query = youtube.search().list("id,snippet");
-			query.setKey(APIKeys.YOUTUBE_KEY); //TODO: Create a class in the same package with your Youtube API key as a static string.
+			query.setKey(APIKeys.YOUTUBE_KEY);
 			query.setType("video");
 			query.setMaxResults(50L);
 			query.setFields("items(id/videoId,snippet/title,snippet/description,snippet/thumbnails/default/url,snippet/channelTitle)");
